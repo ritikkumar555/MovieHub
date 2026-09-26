@@ -25,7 +25,7 @@ async function searchMovies(movieName){
 
     movieHub.innerHTML = `<div class="loader"></div>`
     
-    let response = await fetch(`http://www.omdbapi.com/?apikey=dadf8b8&s=${movieName}`);
+    let response = await fetch(`http://www.omdbapi.com/?apikey=dadf8b8&s=${encodeURIComponent(movieName)}`);
     
     let data = await response.json();
     
@@ -58,8 +58,8 @@ function displayMovies(movies){
                           </div>
 
                           <div>
-                            <p>${movie.title}</p>
-                            <p>${movie.year}</p>
+                            <p>${movie.Title}</p>
+                            <p>${movie.Year}</p>
                          </div> 
                                `
 

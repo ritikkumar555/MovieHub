@@ -5,17 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Hub</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>Movie Hub</h1>
-    <div>
-        <form id="movieForm" action="">
-            <input type="text" id="movieInput" placeholder="Search the movie title (e.g. Inception, The Matrix)...">
-            <button>Search</button>
-        </form>
-    </div>
+<body  class="bg-zinc-950 text-zinc-100 font-sans antialiased min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+    
+    <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2 text-xl font-bold tracking-tight text-white group">
+                    <svg class="w-7 h-7 text-red-600 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v3h2.5l1.5-3H4zm4.5 0l-1.5 3h3l1.5-3H8.5zm5 0l-1.5 3h3l1.5-3h-3zm5 0l-1.5 3H20V6h-1.5zM4 11v7h16v-7H4z" />
+                    </svg>
+                    <span>Movie<span class="text-red-600">Hub</span></span>
+                </a>
 
-    <div id="movieHub"> </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-zinc-300 hover:text-red-500 font-medium text-sm transition-colors">Home</a>
+                    <a href="#about" class="text-zinc-300 hover:text-red-500 font-medium text-sm transition-colors">About</a>
+                    <a href="#search" class="text-zinc-300 hover:text-red-500 font-medium text-sm transition-colors">Search</a>
+                    <a href="#contact" class="text-zinc-300 hover:text-red-500 font-medium text-sm transition-colors">Contact</a>
+                </div>
+
+                <button id="hamburger" class="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-900 cursor-pointer focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <div id="options" class="hidden flex-col md:hidden absolute top-16 left-0 right-0 bg-zinc-950/95 backdrop-blur-lg border-b border-zinc-800 px-6 py-4 space-y-4 shadow-xl">
+                    <a href="index.html" class="text-zinc-300 hover:text-red-500 font-medium text-base transition-colors">Home</a>
+                    <a href="#about" class="text-zinc-300 hover:text-red-500 font-medium text-base transition-colors">About</a>
+                    <a href="#search" class="text-zinc-300 hover:text-red-500 font-medium text-base transition-colors">Search</a>
+                    <a href="#contact" class="text-zinc-300 hover:text-red-500 font-medium text-base transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <div id="search" class="max-w-2xl mx-auto mb-12 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Search Movies</h1>
+            <p class="text-zinc-400 text-base mb-8">Type a title to search for films, view ratings, and discover new stories.</p>
+
+            <form id="movieForm" class="relative flex items-center">
+                <div class="absolute left-4 pointer-events-none text-zinc-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+
+                <input 
+                    id="movieInput" 
+                    type="text" 
+                    placeholder="Search movie title (e.g. Inception, The Matrix)..."
+                    autocomplete="off"
+                    class="w-full bg-zinc-900 border border-zinc-800 rounded-xl py-4 pl-12 pr-32 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition shadow-inner"
+                >
+
+                <button 
+                    type="submit"
+                    class="absolute right-2 top-2 bottom-2 px-6 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-red-500"
+                >
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <div id="movieHub" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 min-h-[300px]"></div>
+    </main>
+
+    <footer class="border-t border-zinc-900 py-8 bg-zinc-950 text-center text-sm text-zinc-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v3h2.5l1.5-3H4zm4.5 0l-1.5 3h3l1.5-3H8.5zm5 0l-1.5 3h3l1.5-3h-3zm5 0l-1.5 3H20V6h-1.5zM4 11v7h16v-7H4z"/>
+                </svg>
+                <span class="font-semibold text-zinc-300">MovieHub</span>
+            </div>
+            <p>&copy; 2026 MovieHub. All rights reserved.</p>
+        </div>
+    </footer>
 
      <script src="index.js"></script>
 </body>
