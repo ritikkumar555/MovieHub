@@ -3,6 +3,7 @@
 A responsive movie-search web application built with **HTML, CSS, and JavaScript** that allows users to search for movies and explore movie information through a movie API.
 
 🔗 **Live Demo:** https://movie-hub-ritik-kumar.vercel.app/
+💻 **Source Code:** https://github.com/ritikkumar555/moviehub
 
 ## ✨ Features
 
@@ -78,10 +79,10 @@ Building MovieHub helped me strengthen my understanding of:
 
 ## 📸 Screenshots
 
-<img width="1920" height="1080" alt="imdb btn" src="https://github.com/user-attachments/assets/e8374157-7433-4973-a276-2feedd4892f9" />
-<img width="1920" height="1080" alt="sherlock details" src="https://github.com/user-attachments/assets/8c3e5a68-020d-45b4-9e08-3404f317d09e" />
-<img width="1920" height="1080" alt="MovieHub search " src="https://github.com/user-attachments/assets/443eac5d-7f18-4ae6-83c6-577604b6c259" />
-<img width="1920" height="1080" alt="MovieHub Hero-section" src="https://github.com/user-attachments/assets/260d7e50-fe1a-40d1-b053-5fa4b0cb7092" />
+<img width="1920" height="1080" alt="MovieHub Hero-section" src="https://github.com/user-attachments/assets/e801d3da-cafb-45af-a2f2-50c564eb52bc" />
+<img width="1920" height="1080" alt="MovieHub search " src="https://github.com/user-attachments/assets/98c3e2a4-e5c9-464e-8566-077a55250553" />
+<img width="1920" height="1080" alt="sherlock details" src="https://github.com/user-attachments/assets/880cc675-a4ef-4c47-b4f9-a8600ccd5409" />
+<img width="1920" height="1080" alt="imdb btn" src="https://github.com/user-attachments/assets/7475e5bc-e3e0-4df5-995c-a548028c6d99" />
 
 
 ## 🔮 Future Improvements
@@ -98,7 +99,7 @@ Building MovieHub helped me strengthen my understanding of:
 **Ritik Kumar**
 
 * GitHub: https://github.com/ritikkumar555
-* Portfolio: https://github.com/ritikkumar555/Personal-Portfolio-Website
+* LinkedIn: https://www.linkedin.com/in/ritik-kumar-a94635244/
 
 ---
 
