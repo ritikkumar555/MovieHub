@@ -3,6 +3,7 @@
 A responsive movie-search web application built with **HTML, CSS, and JavaScript** that allows users to search for movies and explore movie information through a movie API.
 
 🔗 **Live Demo:** https://movie-hub-ritik-kumar.vercel.app/
+
 💻 **Source Code:** https://github.com/ritikkumar555/moviehub
 
 ## ✨ Features
