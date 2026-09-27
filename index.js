@@ -5,6 +5,7 @@ const movieInput = document.querySelector("#movieInput");
 
 const movieHub = document.querySelector("#movieHub");
 
+searchMovies("Avengers");
 
 movieForm.addEventListener("submit", (e) =>{
     
